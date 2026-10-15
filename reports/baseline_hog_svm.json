@@ -1,0 +1,49 @@
+{
+  "baseline": "hog_svm",
+  "overall": {
+    "accuracy": 0.5116,
+    "f1_big": 0.5263,
+    "confusion": {
+      "tp": 35,
+      "fp": 32,
+      "fn": 31,
+      "tn": 31
+    }
+  },
+  "per_crop": {
+    "chamagadda": {
+      "accuracy": 0.3889,
+      "f1_big": 0.3774,
+      "confusion": {
+        "tp": 10,
+        "fp": 16,
+        "fn": 17,
+        "tn": 11
+      }
+    },
+    "kheera": {
+      "accuracy": 0.1667,
+      "f1_big": 0.2424,
+      "confusion": {
+        "tp": 4,
+        "fp": 14,
+        "fn": 11,
+        "tn": 1
+      }
+    },
+    "tomato": {
+      "accuracy": 0.8889,
+      "f1_big": 0.8936,
+      "confusion": {
+        "tp": 21,
+        "fp": 2,
+        "fn": 3,
+        "tn": 19
+      }
+    }
+  },
+  "n_rows": 129,
+  "synthetic_data": true,
+  "patch_px": 128,
+  "side_mm": 260.0
+}

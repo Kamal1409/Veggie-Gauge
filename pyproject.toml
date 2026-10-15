@@ -1,0 +1,45 @@
+[project]
+name = "veggie-gauge"
+version = "0.1.0"
+description = "Tells which of two same-kind vegetables in a photo is bigger: segment, calibrate, measure, estimate weight, compare."
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi==0.143.2",
+    "gradio==6.30.0",
+    "httpx==0.28.1",
+    "joblib==1.6.0",
+    "matplotlib==3.11.2",
+    "mypy>=2.4.0",
+    "numpy==2.4.6",
+    "opencv-python-headless==5.0.0.93",
+    "pandas==3.0.6",
+    "pytest==9.1.1",
+    "python-multipart==0.0.32",
+    "scikit-learn==1.9.1",
+    "torch==2.11.0",
+    "torchvision==0.26.0",
+    "uvicorn[standard]==0.54.0",
+]
+[tool.hatch.environments.default]
+path = "venv"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py310"
+extend-exclude = ["notebooks", "venv", "dist"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["B008", "B905"]  # FastAPI File(...)/Query(...) defaults; zip(strict=) is noise here
+
+[tool.pyright]
+include = ["src", "train", "eval", "baselines", "app", "tools", "tests", "run.py"]
+venvPath = "."
+venv = "venv"
+pythonVersion = "3.11"
+typeCheckingMode = "standard"

@@ -1,0 +1,144 @@
+{
+  "status": "ok",
+  "message": "ok",
+  "mm_per_px": 0.24993,
+  "groups": [
+    {
+      "crop": "tomato",
+      "basis": "weight_g",
+      "difference_pct": 77.3,
+      "items": [
+        {
+          "id": 3,
+          "crop": "tomato",
+          "crop_prob": 0.992,
+          "length_mm": 65.2,
+          "width_mm": 62.0,
+          "area_mm2": 3169.0,
+          "bbox": [
+            990,
+            654,
+            1238,
+            915
+          ],
+          "flags": [],
+          "weight_g": 118.8,
+          "weight_err_g": 8.2,
+          "absolute": "SMALL",
+          "rank": 1,
+          "pairwise": "BIGGER"
+        },
+        {
+          "id": 0,
+          "crop": "tomato",
+          "crop_prob": 0.993,
+          "length_mm": 53.7,
+          "width_mm": 51.2,
+          "area_mm2": 2164.6,
+          "bbox": [
+            42,
+            696,
+            257,
+            901
+          ],
+          "flags": [],
+          "weight_g": 67.0,
+          "weight_err_g": 8.2,
+          "absolute": "SMALL",
+          "rank": 2,
+          "pairwise": "SMALLER"
+        }
+      ],
+      "adjacent": [
+        {
+          "higher": 3,
+          "lower": 0,
+          "verdict": "BIGGER",
+          "difference_pct": 77.3
+        }
+      ]
+    },
+    {
+      "crop": "chamagadda",
+      "basis": "weight_g",
+      "difference_pct": 613.0,
+      "items": [
+        {
+          "id": 1,
+          "crop": "chamagadda",
+          "crop_prob": 0.977,
+          "length_mm": 77.6,
+          "width_mm": 65.4,
+          "area_mm2": 4023.5,
+          "bbox": [
+            431,
+            226,
+            754,
+            494
+          ],
+          "flags": [],
+          "weight_g": 159.0,
+          "weight_err_g": 4.5,
+          "absolute": "BIG",
+          "rank": 1
+        },
+        {
+          "id": 2,
+          "crop": "chamagadda",
+          "crop_prob": 0.99,
+          "length_mm": 53.7,
+          "width_mm": 42.2,
+          "area_mm2": 1858.1,
+          "bbox": [
+            813,
+            951,
+            1016,
+            1153
+          ],
+          "flags": [],
+          "weight_g": 48.9,
+          "weight_err_g": 4.5,
+          "absolute": "BIG",
+          "rank": 2
+        },
+        {
+          "id": 4,
+          "crop": "chamagadda",
+          "crop_prob": 0.992,
+          "length_mm": 42.4,
+          "width_mm": 34.0,
+          "area_mm2": 1124.6,
+          "bbox": [
+            1312,
+            926,
+            1479,
+            1075
+          ],
+          "flags": [],
+          "weight_g": 22.3,
+          "weight_err_g": 4.5,
+          "absolute": "SMALL",
+          "rank": 3
+        }
+      ],
+      "adjacent": [
+        {
+          "higher": 1,
+          "lower": 2,
+          "verdict": "BIGGER",
+          "difference_pct": 225.2
+        },
+        {
+          "higher": 2,
+          "lower": 4,
+          "verdict": "BIGGER",
+          "difference_pct": 119.3
+        }
+      ]
+    }
+  ],
+  "uncertain": [],
+  "excluded": [],
+  "notes": [],
+  "latency_ms": 252.7
+}

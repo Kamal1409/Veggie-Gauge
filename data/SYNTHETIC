@@ -1,0 +1,7 @@
+{
+  "warning": "SYNTHETIC DATA. Metrics computed on it validate the code, not real-world accuracy.",
+  "true_mm_per_px": 0.25,
+  "calibrated_mm_per_px": 0.249932,
+  "reference_masks": "exact outlines (stand-in for hand tracing)",
+  "seed": 0
+}

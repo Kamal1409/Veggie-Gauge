@@ -1,0 +1,10 @@
+{
+  "mm_per_px": 0.249932,
+  "image_size": [
+    1600,
+    1200
+  ],
+  "method": "auto",
+  "span_mm": 320.0,
+  "source": "ruler.jpg"
+}

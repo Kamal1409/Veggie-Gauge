@@ -1,0 +1,52 @@
+{
+  "baseline": "cnn",
+  "overall": {
+    "accuracy": 0.7597,
+    "f1_big": 0.7891,
+    "confusion": {
+      "tp": 58,
+      "fp": 23,
+      "fn": 8,
+      "tn": 40
+    }
+  },
+  "per_crop": {
+    "chamagadda": {
+      "accuracy": 0.7963,
+      "f1_big": 0.7925,
+      "confusion": {
+        "tp": 21,
+        "fp": 5,
+        "fn": 6,
+        "tn": 22
+      }
+    },
+    "kheera": {
+      "accuracy": 0.6,
+      "f1_big": 0.7143,
+      "confusion": {
+        "tp": 15,
+        "fp": 12,
+        "fn": 0,
+        "tn": 3
+      }
+    },
+    "tomato": {
+      "accuracy": 0.8222,
+      "f1_big": 0.8462,
+      "confusion": {
+        "tp": 22,
+        "fp": 6,
+        "fn": 2,
+        "tn": 15
+      }
+    }
+  },
+  "n_rows": 129,
+  "synthetic_data": true,
+  "arch": "mobilenet_v3_small",
+  "epochs": 15,
+  "patch_px": 224,
+  "side_mm": 260.0,
+  "device": "cuda"
+}

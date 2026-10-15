@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+venv/
+
+# Generated
+reports/overlays/
+
+# Large or personal data: commit the CSVs and labels, keep photos out of git
+data/raw/

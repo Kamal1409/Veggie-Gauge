@@ -1,0 +1,14 @@
+.venv
+venv
+**/__pycache__
+.pytest_cache
+.ruff_cache
+runs
+data/raw
+data/reference_masks
+data/features.csv
+baselines
+reports
+notebooks
+tests
+*.pt

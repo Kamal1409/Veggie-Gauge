@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 920" width="960" height="920" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#15803d"/>
+    </marker>
+    <marker id="arrowO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9a3412"/>
+    </marker>
+    <style>
+      .t  { font-size: 16px; font-weight: 700; fill: #0f172a; }
+      .s  { font-size: 12.5px; fill: #334155; }
+      .h  { font-size: 19px; font-weight: 700; }
+      .lb { font-size: 12px; font-style: italic; fill: #15803d; }
+      .lo { font-size: 12px; font-style: italic; fill: #9a3412; }
+      .flow { stroke: #475569; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .link { stroke: #15803d; stroke-width: 2; stroke-dasharray: 7 5; fill: none; marker-end: url(#arrowG); }
+      .opt  { stroke: #9a3412; stroke-width: 2; stroke-dasharray: 3 4; fill: none; marker-end: url(#arrowO); }
+    </style>
+  </defs>
+
+  <rect width="960" height="920" fill="#ffffff"/>
+  <text x="480" y="32" text-anchor="middle" style="font-size:22px;font-weight:700;fill:#0f172a">Vegetable Size Comparison — Fixed-Camera Classical CV + Classic ML</text>
+
+  <!-- Lane backgrounds -->
+  <rect x="25" y="55" width="400" height="800" rx="14" fill="#eff6ff" stroke="#bfdbfe"/>
+  <rect x="495" y="55" width="440" height="820" rx="14" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="225" y="84" text-anchor="middle" class="h" fill="#1d4ed8">OFFLINE · Data &amp; Training</text>
+  <text x="715" y="84" text-anchor="middle" class="h" fill="#15803d">ONLINE · Inference (sorting station)</text>
+
+  <!-- LEFT LANE -->
+  <rect x="45" y="100" width="360" height="70" rx="10" fill="#fff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="225" y="128" text-anchor="middle" class="t">1. Weigh every vegetable</text>
+  <text x="225" y="150" text-anchor="middle" class="s">Tomato · kheera · chamagadda → ground_truth.csv</text>
+
+  <rect x="45" y="210" width="360" height="70" rx="10" fill="#fff7ed" stroke="#9a3412" stroke-width="2"/>
+  <text x="225" y="238" text-anchor="middle" class="t">2. Fixed rig + one ruler photo</text>
+  <text x="225" y="260" text-anchor="middle" class="s">Phone at fixed height, white sheet → mm per pixel</text>
+
+  <rect x="45" y="320" width="360" height="70" rx="10" fill="#fff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="225" y="348" text-anchor="middle" class="t">3. Photograph</text>
+  <text x="225" y="370" text-anchor="middle" class="s">Singles + same-crop pairs + mixed-crop test set</text>
+
+  <rect x="45" y="430" width="360" height="70" rx="10" fill="#fff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="225" y="458" text-anchor="middle" class="t">4. Segment + extract features</text>
+  <text x="225" y="480" text-anchor="middle" class="s">Same code as online steps A–B (no annotation)</text>
+
+  <rect x="45" y="540" width="360" height="70" rx="10" fill="#fff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="225" y="568" text-anchor="middle" class="t">5. Train classic ML models</text>
+  <text x="225" y="590" text-anchor="middle" class="s">Crop classifier · weight regressor · small/big SVM</text>
+
+  <rect x="45" y="650" width="360" height="70" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="225" y="678" text-anchor="middle" class="t">6. Baseline: raw-image classifier</text>
+  <text x="225" y="700" text-anchor="middle" class="s">CNN / HOG+SVM on image patches, for comparison</text>
+
+  <rect x="45" y="760" width="360" height="80" rx="10" fill="#fff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="225" y="788" text-anchor="middle" class="t">7. Evaluation (leave-one-item-out)</text>
+  <text x="225" y="808" text-anchor="middle" class="s">Weight MAE · pairwise acc vs size gap · small/big acc</text>
+  <text x="225" y="826" text-anchor="middle" class="s">features vs baseline · gate accuracy · latency</text>
+
+  <path class="flow" d="M225,170 L225,208"/>
+  <path class="flow" d="M225,280 L225,318"/>
+  <path class="flow" d="M225,390 L225,428"/>
+  <path class="flow" d="M225,500 L225,538"/>
+  <path class="flow" d="M225,610 L225,648"/>
+  <path class="flow" d="M225,720 L225,758"/>
+  <path class="flow" d="M45,135 C8,135 8,575 43,575"/>
+  <text x="14" y="355" class="s" transform="rotate(-90 14 355)" text-anchor="middle">true weights = labels</text>
+
+  <!-- RIGHT LANE -->
+  <rect x="525" y="100" width="380" height="70" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="715" y="128" text-anchor="middle" class="t">Input image</text>
+  <text x="715" y="150" text-anchor="middle" class="s">Fixed rig · white sheet · 1+ vegetables</text>
+
+  <rect x="525" y="210" width="380" height="70" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="715" y="238" text-anchor="middle" class="t">A. Classical segmentation</text>
+  <text x="715" y="260" text-anchor="middle" class="s">Saturation/Lab + Otsu → morphology → contours</text>
+
+  <rect x="525" y="320" width="380" height="70" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="715" y="348" text-anchor="middle" class="t">B. Features in mm</text>
+  <text x="715" y="370" text-anchor="middle" class="s">Area, axes, perimeter, hull, elongation, hue</text>
+
+  <rect x="525" y="430" width="380" height="70" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="715" y="458" text-anchor="middle" class="t">C. Crop type + same-type gate</text>
+  <text x="715" y="480" text-anchor="middle" class="s">Colour+shape classifier · different crops → stop</text>
+
+  <rect x="525" y="540" width="380" height="70" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="715" y="568" text-anchor="middle" class="t">D. Estimate weight (g)</text>
+  <text x="715" y="590" text-anchor="middle" class="s">Per-crop volume proxy → linear regression</text>
+
+  <rect x="525" y="650" width="380" height="70" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="715" y="678" text-anchor="middle" class="t">E. Decide (two modes)</text>
+  <text x="715" y="700" text-anchor="middle" class="s">Pairwise: bigger / smaller / similar · Absolute: S / B</text>
+
+  <rect x="525" y="760" width="380" height="90" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2.5"/>
+  <text x="715" y="788" text-anchor="middle" class="t">F. Output</text>
+  <text x="715" y="810" text-anchor="middle" class="s">Overlay image · per-item mm, grams, verdict</text>
+  <text x="715" y="830" text-anchor="middle" class="s">JSON via Gradio demo / FastAPI</text>
+
+  <path class="flow" d="M715,170 L715,208"/>
+  <path class="flow" d="M715,280 L715,318"/>
+  <path class="flow" d="M715,390 L715,428"/>
+  <path class="flow" d="M715,500 L715,538"/>
+  <path class="flow" d="M715,610 L715,648"/>
+  <path class="flow" d="M715,720 L715,758"/>
+
+  <!-- Cross-lane links -->
+  <path class="opt"  d="M405,245 C460,245 470,355 523,355"/>
+  <text x="462" y="290" class="lo" text-anchor="middle">mm/px</text>
+  <path class="link" d="M405,560 C455,560 470,465 523,465"/>
+  <text x="458" y="500" class="lb" text-anchor="middle">crop clf</text>
+  <path class="link" d="M405,575 L523,575"/>
+  <text x="464" y="568" class="lb" text-anchor="middle">regressor</text>
+  <path class="link" d="M405,590 C455,590 470,685 523,685"/>
+  <text x="458" y="652" class="lb" text-anchor="middle">SVM</text>
+</svg>
